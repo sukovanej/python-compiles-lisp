@@ -41,10 +41,10 @@ def tokenize(input_string: str) -> list[Token]:
                 buffer = ""
 
             tokens.append(NonValueToken.RIGHT_PAR)
-        elif c == " " and buffer:
+        elif c in [" ", "\n"] and buffer:
             tokens.append(convert_buffer_to_token(buffer))
             buffer = ""
-        elif c != " ":
+        elif not c.isspace():
             buffer += c
 
     if buffer:

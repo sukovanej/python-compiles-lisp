@@ -1,6 +1,3 @@
-from enum import Enum
-
-
 DEFAULT_TEMPLATE = """
 section .text          ;Code Segment
    global _start
@@ -12,7 +9,3 @@ _start:                ;User prompt
    mov ebx, 0
    int 80h
 """
-
-
-class CompilerInstruction(Enum):
-    STACK_POINTER = "STACK_POINTER"
