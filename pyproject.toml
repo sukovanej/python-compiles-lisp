@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "python-compiles-lisp"
+version = "0.1.0"
+description = ""
+authors = ["milan.suk <milan.suk@kiwi.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+isort = "^5.9.3"
+mypy = "^0.910"
+black = "^21.10b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+known_first_party = "python_compiles_lisp"
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+
+[tool.black]
+line-length = 120
